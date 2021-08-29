@@ -27,14 +27,14 @@ function reset(){
 </head>
 <body>
 <div class="container">
-	<h2>회원관리시스템</h2>
+	<h2>상세화면</h2>
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<c:if test="${sessionScope.userId!=null && sessionScope.userId!=''}">
-				<h3>${sessionScope.userName}님 환영합니다.</h3>
+				<label>${sessionScope.userName}님이 로그인 하셨습니다.</label>
 			</c:if>
 			<c:if test="${sessionScope.userId==null || sessionScope.userId==''}">
-				<h3>환영합니다.</h3>
+				<label>환영합니다.</label>
 			</c:if>
 		</div>
 		<div class="panel-body">
@@ -67,19 +67,19 @@ function reset(){
 				<div class="form-group">
 					<label class="control-label col-sm-2">나이 : </label>
 					<div class="col-sm-10">
-						<input type="text" name="age" value="${vo.age}" class="form-control" id="age"/>
+						<input type="text" name="age" value="${vo.age}" class="form-control" id="age" style="width:10%"/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-sm-2">이메일 : </label>
 					<div class="col-sm-10">
-						<input type="text" name="email" value="${vo.email}" class="form-control" id="email"/>
+						<input type="text" name="email" value="${vo.email}" class="form-control" id="email" style="width:30%"/>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="control-label col-sm-2">전화번호 : </label>
 					<div class="col-sm-10">
-						<input type="text" name="phone" value="${vo.phone}" class="form-control" id="phone"/>
+						<input type="text" name="phone" value="${vo.phone}" class="form-control" id="phone" style="width:30%"/>
 					</div>
 				</div>
 			</form>
