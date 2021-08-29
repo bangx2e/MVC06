@@ -16,7 +16,6 @@ public class MemberLogoutController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String ctx = request.getContextPath();
-		//커밋 체크용 
 		request.getSession().invalidate();
 		return "redirect:"+ctx+"/memberList.do";
 	}
